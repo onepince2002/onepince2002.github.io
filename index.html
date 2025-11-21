@@ -1,14 +1,250 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>你好，GitHub</title>
-  </head>
-  <body>
-    <h1>什麽都沒有</h1>
-  </body>
-</html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王棕錡 - 軟體工程師作品集</title>
+    <!-- 載入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 設定Inter字體作為主要字體，並回退到 sans-serif */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* 自定義滾動條樣式，使其在深色背景下更協調 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827; /* bg-gray-900 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* gray-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* gray-500 */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#3b82f6',
+                        'secondary-gray': '#e5e7eb',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-secondary-gray min-h-screen">
 
-<script>
-	alert(1)
-</script>
+    <!-- 頂部導航欄 (Sticky Header) -->
+    <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-extrabold text-primary-blue tracking-wider">王棕錡</a>
+            <div class="space-x-4 flex">
+                <a href="#about" class="text-gray-300 hover:text-primary-blue transition duration-200">關於我</a>
+                <a href="#experience" class="text-gray-300 hover:text-primary-blue transition duration-200">工作經驗</a>
+                <a href="#skills" class="text-gray-300 hover:text-primary-blue transition duration-200">專業技能</a>
+                <a href="#contact" class="text-gray-300 hover:text-primary-blue transition duration-200">聯絡方式</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- 英雄區塊 (Hero Section) -->
+        <section class="text-center py-20 bg-gray-800/50 rounded-2xl shadow-2xl mb-16">
+            <h1 class="text-5xl sm:text-7xl font-extrabold text-white mb-4">王 棕 錡</h1>
+            <p class="text-xl sm:text-2xl text-primary-blue font-semibold mb-6">軟體工程師 | 9-10年工作經歷</p>
+            <p class="text-lg max-w-3xl mx-auto text-gray-300 italic">
+                「負責產品設計架構規劃,勇於嘗試新工具去追求效率與自動化。希望有一天可實現一句話一個按鍵完成一個工作!」
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="#experience" class="bg-primary-blue hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                    查看我的經驗
+                </a>
+                <a href="mailto:onepince2002@gmail.com" class="bg-gray-700 hover:bg-gray-600 text-gray-300 font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                    Email 聯絡我
+                </a>
+            </div>
+        </section>
+
+        <!-- 關於我 (About Me) -->
+        <section id="about" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-primary-blue pb-2">關於我 - 自我介紹</h2>
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg leading-relaxed">
+                <p class="mb-4">您好，我叫王棕錡，現任於新人類資訊擔任軟體開發工程師。主要使用 <span class="font-semibold text-primary-blue">VueJs (ES6)、C#、MS SQL</span> 進行開發，但不侷限於既有技術，會依專案需求快速熟悉並採用新的工具。</p>
+                <p class="mb-4">我的職責涵蓋系統架構設計、效能優化、自動化部署 (CI/CD) 以及資安修補等工作。近期更是充分利用 <span class="font-semibold text-primary-blue">AI</span>，加速工作內容的效率。</p>
+                <p class="mb-4">我相信工程能力不應侷限於特定方向，持續保持學習熱忱、勇於嘗試與突破，是面對快速變化技術環境最重要的能力。我著重於團隊合作，透過良好的溝通、透明的進度共享與彼此的信任，推動專案高品質完成。</p>
+                <p class="mb-4">工作以外，我的興趣是騎自行車與開發自動化小工具。騎車的專注與安靜常是我理清思緒、思考技術問題的最佳時機，而藉由程式讓重複性的流程變得更輕鬆、更有效率，則是我持續學習的動力。</p>
+                <p class="font-semibold mt-6">期待未來能在更具挑戰性的環境中，深化架構設計、系統優化與 DevOps 相關能力。</p>
+            </div>
+        </section>
+        
+        <!-- 專業技能 (Skills) -->
+        <section id="skills" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-primary-blue pb-2">專業技能與專長</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- 程式語言與網頁技術 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-primary-blue mb-4">程式語言與前端</h3>
+                    <ul class="space-y-2 list-disc list-inside">
+                        <li><span class="font-semibold">核心語言:</span> C#, Java, Python</li>
+                        <li><span class="font-semibold">網頁技術:</span> Vue.js, jQuery, ASP.NET</li>
+                        <li><span class="font-semibold">其他工具:</span> PowerShell, Visual Studio .net</li>
+                    </ul>
+                </div>
+                
+                <!-- 系統架構與自動化 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-primary-blue mb-4">系統架構與 DevOps</h3>
+                    <ul class="space-y-2 list-disc list-inside">
+                        <li>系統架構規劃與模組化 (高併發/擴充性)</li>
+                        <li><span class="font-semibold">CI/CD:</span> 自動化部署流水線 (Pipeline)</li>
+                        <li><span class="font-semibold">DevSecOps:</span> SAST, DAST 掃描工具</li>
+                        <li><span class="font-semibold">版控:</span> Git (Git Flow), SVN, TFS</li>
+                        <li><span class="font-semibold">容器化:</span> Docker</li>
+                    </ul>
+                </div>
+
+                <!-- 資料庫與核心能力 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-primary-blue mb-4">資料庫與領域知識</h3>
+                    <ul class="space-y-2 list-disc list-inside">
+                        <li><span class="font-semibold">資料庫:</span> MS SQL, Oracle (PL/SQL, Stored Procedures)</li>
+                        <li><span class="font-semibold">金融領域:</span> 銀行 O2O、電子錢包核心開發 (ACID)</li>
+                        <li>系統整合分析 (API 規格定義)</li>
+                        <li>Clean Code 原則與程式碼重構</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工作經驗 (Experience) -->
+        <section id="experience" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-8 border-b-2 border-primary-blue pb-2">工作經驗</h2>
+            
+            <!-- 經驗卡片 1: 新人類資訊 -->
+            <div class="relative mb-12 border-l-4 border-primary-blue pl-6">
+                <div class="absolute w-4 h-4 bg-primary-blue rounded-full -left-2 top-0 mt-1"></div>
+                <p class="text-sm text-gray-400">2019/7 - 至今 (仍在職)</p>
+                <h3 class="text-2xl font-bold text-white mt-1">軟體工程師 - 新人類資訊科技股份有限公司</h3>
+                <p class="text-primary-blue mb-4">電腦軟體服務業 | 新北市新店區</p>
+                <ul class="list-disc ml-5 space-y-3 text-gray-300">
+                    <li><span class="font-semibold">架構設計與整合:</span> 統整公司產品核心功能，設計並實作統一 API 介面，大幅降低重複開發成本。</li>
+                    <li><span class="font-semibold">DevOps 與資安:</span> 建置 CI/CD 自動化部署流水線，導入 Code Review 機制；執行資安掃描 (SQL Injection, XSS) 修復高風險漏洞，確保系統合規性。</li>
+                    <li><span class="font-semibold">效率優化:</span> 導入標準化 Git 版控流程與分支策略 (Git Flow)，提升團隊協作效率與程式碼可追溯性。</li>
+                    <li><span class="font-semibold">技術提升:</span> 主導核心模組程式碼重構，導入設計模式，優化邏輯並消除技術債，提升可讀性與可維護性。</li>
+                </ul>
+            </div>
+
+            <!-- 經驗卡片 2: 暘碁資訊 -->
+            <div class="relative mb-12 border-l-4 border-gray-700 pl-6">
+                <div class="absolute w-4 h-4 bg-gray-700 rounded-full -left-2 top-0 mt-1"></div>
+                <p class="text-sm text-gray-400">2015/1 - 2019/7 (4年7個月)</p>
+                <h3 class="text-2xl font-bold text-white mt-1">軟體工程師 - 暘碁資訊股份有限公司</h3>
+                <p class="text-gray-500 mb-4">電腦軟體服務業 | 台北市大同區</p>
+                <ul class="list-disc ml-5 space-y-3 text-gray-300">
+                    <li><span class="font-semibold">金融核心開發:</span> 負責銀行 O2O 平台與 Wallet APP 核心帳務系統開發，確保儲值、交易等功能符合 ACID 強一致性原則。</li>
+                    <li><span class="font-semibold">高可用性設計:</span> 設計高流量活動的流量削峰機制，維持系統在高行銷活動期間的可用性 (High Availability)。</li>
+                    <li><span class="font-semibold">數位轉型專案:</span> 主導「台灣大車隊無紙化專案」，透過 RESTful API 整合外部系統，成功將企業簽單數位化。</li>
+                    <li><span class="font-semibold">效能調校:</span> 針對 App 端高頻呼叫的 API 進行資料庫與邏輯層效能調校，提升回應速度。</li>
+                </ul>
+            </div>
+
+            <!-- 經驗卡片 3: 威亞科技 -->
+            <div class="relative mb-12 border-l-4 border-gray-700 pl-6">
+                <div class="absolute w-4 h-4 bg-gray-700 rounded-full -left-2 top-0 mt-1"></div>
+                <p class="text-sm text-gray-400">2014/7 - 2014/12 (6個月)</p>
+                <h3 class="text-2xl font-bold text-white mt-1">程式設計師 - 威亞科技</h3>
+                <p class="text-gray-500 mb-4">電腦系統整合服務業 | 台北市南港區</p>
+                <ul class="list-disc ml-5 space-y-3 text-gray-300">
+                    <li>參與國防指揮部核心資訊系統開發與維護，在高度資安規範與封閉式網路環境下，確保系統穩定性。</li>
+                    <li>負責 Oracle 資料庫的 Schema 設計與維護，熟練撰寫 PL/SQL 處理複雜業務邏輯與報表統計。</li>
+                    <li>運用 Java Web (JSP/Servlet) 搭配 jQuery 進行前後端整合開發。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 專案經驗 (Projects) -->
+        <section id="projects" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-primary-blue pb-2">主要參與專案</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 專案卡片 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-primary-blue transition duration-300">
+                    <h4 class="text-lg font-semibold text-primary-blue">台灣大車隊無紙化專案</h4>
+                    <p class="text-sm text-gray-400 mb-3">(暘碁資訊)</p>
+                    <p class="text-gray-300 text-sm">主導專案開發，透過 RESTful API 整合外部車隊系統，成功將企業簽單與收據數位化。</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-primary-blue transition duration-300">
+                    <h4 class="text-lg font-semibold text-primary-blue">銀行電子支付系統</h4>
+                    <p class="text-sm text-gray-400 mb-3">(玉山金/元大金 Alipay 支付系統)</p>
+                    <p class="text-gray-300 text-sm">參與核心支付系統開發，處理高安全性、高一致性的金流交易服務。</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-primary-blue transition duration-300">
+                    <h4 class="text-lg font-semibold text-primary-blue">BPM 系統開發 (流程管理)</h4>
+                    <p class="text-sm text-gray-400 mb-3">(聯華、LINE Pay、SONY)</p>
+                    <p class="text-gray-300 text-sm">為多個大型客戶開發客製化 BPM 系統，負責業務邏輯與流程架構實現。</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-primary-blue transition duration-300">
+                    <h4 class="text-lg font-semibold text-primary-blue">第一銀行 稽核系統重構</h4>
+                    <p class="text-sm text-gray-400 mb-3">(新人類資訊)</p>
+                    <p class="text-gray-300 text-sm">主導既有系統的架構重構與技術債消除，提升系統的可維護性。</p>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-primary-blue transition duration-300">
+                    <h4 class="text-lg font-semibold text-primary-blue">電信錢包系統核心</h4>
+                    <p class="text-sm text-gray-400 mb-3">(台灣大哥大錢包系統)</p>
+                    <p class="text-gray-300 text-sm">負責高流量的 O2O 平台與電子錢包帳務核心系統開發。</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- 聯絡方式 (Contact) -->
+        <section id="contact" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-primary-blue pb-2">聯絡方式</h2>
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg text-center">
+                <p class="text-lg mb-4">我很期待能有機會與您交流技術和開發經驗。歡迎隨時透過以下方式與我聯繫：</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mt-6">
+                    
+                    <!-- Email -->
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 10H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2z"></path></svg>
+                        <a href="mailto:onepince2002@gmail.com" class="text-gray-300 hover:text-primary-blue transition duration-200">onepince2002@gmail.com</a>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.128a11.042 11.042 0 005.516 5.516l1.128-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span class="text-gray-300">0978-595-710</span>
+                    </div>
+
+                    <!-- Location -->
+                     <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span class="text-gray-300">新北市樹林區</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 py-6 text-center">
+        <p class="text-gray-400 text-sm">&copy; 2024 王棕錡 個人作品集. 所有內容基於履歷資料產生。</p>
+    </footer>
+
+</body>
+</html>
